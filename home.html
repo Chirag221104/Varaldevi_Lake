@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Varaldevi Lake</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="index.css">
+    <style>
+        body {
+            font-family: 'Play', sans-serif;
+        }
+        .hero {
+            text-align: center;
+            padding: 30px 0;
+            background: url('hero-background.jpg') no-repeat center center;
+            background-size: cover;
+            color: white;
+            margin-top: 0;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .hero p {
+            color: black;
+        }
+        .hero h1 {
+            font-family: 'Fredoka One', cursive;
+            font-size: 3em;
+        }
+        .about, .gallery, .contact {
+            padding: 30px 0;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .gallery img:hover {
+            transform: scale(1.5);
+            z-index: 10;
+            position: relative;
+        }
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .contact-form button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            animation: bounce 2s infinite;
+        }
+        .contact-form button:hover {
+            background-color: #0056b3;
+        }
+        .breaking-news {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 0;
+            margin-bottom: 0;
+        }
+        .breaking-news img {
+            transform: scale(0.8);
+            transform-origin: center;
+            max-width: 30%;
+            height: auto;
+        }
+        #home-icon {
+            height: 7vh;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-30px); }
+            60% { transform: translateY(-15px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header id="header"></header>
+        <div class="breaking-news"></div>
+        <main>
+            <section class="hero">
+                <h1><img id="home-icon" src="home1.png" alt="Home"> Welcome to Varaldevi Lake</h1>
+                <p>Explore the beauty and tranquility of our stunning lake</p>
+            </section>
+            <section class="about container">
+                <h2 class="text-center">About Us</h2>
+                <p>Varaldevi Lake is a serene and beautiful lake located in [location]. It is a popular spot for locals and tourists alike, offering a peaceful environment, stunning views, and a variety of outdoor activities.</p>
+            </section>
+            <section class="gallery container">
+                <h2 class="text-center">Gallery</h2>
+                <div class="row">
+                    <div class="col-md-3">
+                        <img src="varaldevi1.jpg" alt="Varaldevi Lake 1">
+                    </div>
+                    <div class="col-md-3">
+                        <img src="varaldevi2.jpg" alt="Varaldevi Lake 2">
+                    </div>
+                    <div class="col-md-3">
+                        <img src="varaldevi3.jpg" alt="Varaldevi Lake 3">
+                    </div>
+                    <div class="col-md-3">
+                        <img src="varaldevi4.jpg" alt="Varaldevi Lake 4">
+                    </div>
+                </div>
+            </section>
+            <section class="contact container">
+                <h2 class="text-center">Contact Us</h2>
+                <form class="contact-form" id="contact-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    
+                    <button type="submit">Submit</button>
+                </form>
+            </section>
+        </main>
+        <footer id="footer"></footer>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+        $(function(){
+            $("#header").load("header.html");
+            $("#footer").load("footer.html");
+        });
+    </script>
+</body>
+</html>
